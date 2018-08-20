@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Planner</title>
     <link rel="stylesheet" href="../css/style.css">
-    <?php include '../config/session.php' ?>
+    <?php include 'overview-controller.php' ?>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <div class="title">My Planner</div>
         <div class="userPanel">
             <i class="fa fa-chevron-down"></i>
-            <span class="username"><?php echo $user_firstname  , ' ' , $user_lastname ?></span>
+            <span class="username"><?php echo $user_firstname, ' ', $user_lastname ?></span>
             <img src=Profile.png width="40" height="40"/>
         </div>
     </div>
@@ -41,35 +41,24 @@
                 </div>
             </div>
             <div class="content">
-                <div class="list">
-                    <div class="title">School Stuff</div>
-                    <ul>
-                        <li class="checked"><i class="fa fa-check-square-o"></i><span>Php exam</span>
-                            <div class="info">
-                                <div class="button green">In progress</div>
-                                <span>Complete by 29/08/2018</span>
-                            </div>
-                        </li>
-                        <li><i class="fa fa-square-o"></i><span>Design a new logo</span>
-                            <div class="info">
-                                <div class="button">Pending</div>
-                                <span>Complete by 15/09/2019</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="list">
-                    <div class="title">Daily stuff</div>
-                    <ul>
-                        <li>
-                            <i class="fa fa-square-o"></i><span>Buy shampoo for mom</span>
-                            <div class="info">
-                                <div class="button">Done</div>
-                                <span>Completed by 31/07/2019</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <?php foreach ($tasks as $task): ?>
+                    <div class="list">
+                        <ul>
+                            <li class="checked">
+                                <form action="" method="POST">
+                                    <i class="fa fa-check-square-o"></i>
+                                    <span>name:<?php echo $task['name'] ?></span>
+                                    <div class="info">
+                                        <div>description: <?php echo $task['description'] ?></div>
+                                        <div>status: <?php echo $task['status'] ?></div>
+                                        <div>user: <?php echo $task['userid'] ?></div>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
+
             </div>
         </div>
     </div>
