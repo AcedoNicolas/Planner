@@ -22,6 +22,13 @@
     <label for="taskdescription">Taak Beschrijving</label>
     <input type="text" name="taskdescription"/>
 
+    <label for="taskstatus">Taak Beschrijving</label>
+    <select name="taskstatus">
+        <option value="todo">todo</option>
+        <option value="doing">doing</option>
+        <option value="done">done</option>
+    </select>
+
     <button type="submit">Voeg taak toe</button>
 </form>
 

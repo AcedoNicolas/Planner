@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="517376e6-1689-4dbf-9659-a0bd17c8f3d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/overview/overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/overview/overview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/add/add-controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/add/add-controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/add/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/add/add.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,12 +35,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="2236" />
+          <entry key="php" value="2328" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="2235" />
+          <entry key="PHP" value="2327" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -55,20 +56,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tasks/add/add-controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="14" selection-start-line="2" selection-end-line="3" />
+            <state relative-caret-position="180">
+              <caret line="9" column="129" selection-start-line="9" selection-start-column="129" selection-end-line="9" selection-end-column="129" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/overview/overview.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="55" column="39" selection-end-line="68" selection-end-column="7" />
+            <state relative-caret-position="431">
+              <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -94,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasks/add/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+            <state relative-caret-position="440">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -162,6 +163,8 @@
         <option value="$PROJECT_DIR$/Tasks/add/add.php" />
         <option value="$PROJECT_DIR$/overview/overview-controller.php" />
         <option value="$PROJECT_DIR$/overview/overview.php" />
+        <option value="$PROJECT_DIR$/tasks/add/add.php" />
+        <option value="$PROJECT_DIR$/tasks/add/add-controller.php" />
       </list>
     </option>
   </component>
@@ -225,7 +228,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534806137039" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534806629138" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
@@ -257,12 +260,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534796896307</updated>
-      <workItem from="1534796900291" duration="9228000" />
+      <workItem from="1534796900291" duration="9719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9228000" />
+    <option name="totallyTimeSpent" value="9719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="846" extended-state="6" />
@@ -359,20 +362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/add/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/add/add-controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="14" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/overview/Profile.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -399,8 +388,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/overview/overview.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="55" column="39" selection-end-line="68" selection-end-column="7" />
+        <state relative-caret-position="431">
+          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/add/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/add/add-controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="129" selection-start-line="9" selection-start-column="129" selection-end-line="9" selection-end-column="129" />
         </state>
       </provider>
     </entry>

@@ -6,8 +6,8 @@ if (isset($_POST)) {
     $taskname = $_POST["taskname"];
     $taskdescription = $_POST["taskdescription"];
     $taskuserid = $_POST["taskuserid"];
-    $status = "'todo'";
-    $sql = "INSERT INTO tasks (name, description, userid, status) VALUES ('$taskname','$taskdescription','$taskuserid', $status);";
+    $status = $_POST["taskstatus"];
+    $sql = "INSERT INTO tasks (name, description, userid, status) VALUES ('$taskname','$taskdescription','$taskuserid', '$status');";
     $mysqli->query($sql);
     header("location: add.php");
 } else {
