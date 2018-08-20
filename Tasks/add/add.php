@@ -7,11 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Planner</title>
     <link rel="stylesheet" href="../../css/style.css">
+
+    <?php include '../../session.php'; ?>
 </head>
 
 <body>
-<form method="POST">
-    <input type="hidden" value="1">
+<form name="addTaskForm" action="add-controller.php" method="POST">
+    <input type="hidden" name="taskuserid" value="<?php echo $user_id ?>">
 
     <label for="taskname">Taak Naam</label>
     <input type="text" name="taskname"/>

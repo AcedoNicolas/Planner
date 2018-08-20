@@ -1,7 +1,17 @@
 <?php
-if (isset($_SESSION['first_name'])) {
-    echo $_SESSION['first_name'];
+
+include '../../database_connection.php';
+
+if (isset($_POST)) {
+    $taskname = $_POST["taskname"];
+    $taskdescription = $_POST["taskdescription"];
+    $taskuserid = $_POST["taskuserid"];
+    $status = "'todo'";
+    $sql = "INSERT INTO tasks (name, description, userid, status) VALUES ('$taskname','$taskdescription','$taskuserid', $status);";
+    $mysqli->query($sql);
+    header("location: add.php");
 } else {
-    echo $_SESSION['first_name'];
+    echo 'Het toevoegen van is niet gelukt';
+    header("location: add.php");
 }
-?>
+
