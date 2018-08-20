@@ -21,7 +21,7 @@ if ($result->num_rows == 0) { // User doesn't exist
 
         // This is how we'll know the user is logged in
         $_SESSION['logged_in'] = true;
-        header("location: ../profile/profile.php");
+        header("location: ../profile/overview.php");
     } else {
         $_SESSION['message'] = "You have entered wrong password, try again!";
         header("location: error.php");

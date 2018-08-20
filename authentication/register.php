@@ -3,7 +3,7 @@
    and sends account confirmation email message
  */
 
-// Set session variables to be used on profile.php page
+// Set session variables to be used on overview.php page
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['first_name'] = $_POST['firstname'];
 $_SESSION['last_name'] = $_POST['lastname'];
@@ -38,7 +38,7 @@ else { // Email doesn't already exist in a database, proceed...
         $_SESSION['logged_in'] = true; // So we know the user has logged in
        
 
-        header("location: profile.php"); 
+        header("location: overview.php");
 
     }
 

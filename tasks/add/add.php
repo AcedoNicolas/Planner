@@ -8,10 +8,11 @@
     <title>Planner</title>
     <link rel="stylesheet" href="../../css/style.css">
 
-    <?php include '../../session.php'; ?>
+    <?php include '../../config/session.php'; ?>
 </head>
 
 <body>
+<a href="../../overview/overview.php">Terug naar overzicht</a>
 <form name="addTaskForm" action="add-controller.php" method="POST">
     <input type="hidden" name="taskuserid" value="<?php echo $user_id ?>">
 

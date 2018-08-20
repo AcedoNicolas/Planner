@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Planner</title>
     <link rel="stylesheet" href="../css/style.css">
-    <?php include '../session.php' ?>
+    <?php include '../config/session.php' ?>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             <div class="viewHeader">
                 <div class="title">Manage Tasks</div>
                 <div class="functions">
-                    <a href="../Tasks/add/add.php" class="button active">Add New Task</a>
+                    <a href="../tasks/add/add.php" class="button active">Add New Task</a>
                     <div class="button">Add New List</div>
                     <div class="button inverz"><i class="fa fa-trash-o"></i></div>
                 </div>
