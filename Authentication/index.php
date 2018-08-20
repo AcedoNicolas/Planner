@@ -7,7 +7,7 @@ session_start();
 <html>
 <head>
     <title>Sign-Up/Login Form</title>
-    <?php include 'css/css.html'; ?>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <?php
