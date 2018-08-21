@@ -35,8 +35,8 @@
             <div class="viewHeader">
                 <div class="title">Manage Tasks</div>
                 <div class="functions">
-                    <a href="../tasks/add/add.php" class="button active">Add New Task</a>
-                    <div class="button">Add New List</div>
+                    <a href="../tasklist/add/add.php" class="button active">Add New Task List</a>
+                    <a href="../tasks/add/add.php" class="button active">Add New Taks</a>
                     <div class="button inverz"><i class="fa fa-trash-o"></i></div>
                 </div>
             </div>
