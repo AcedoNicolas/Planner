@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Planner</title>
     <link rel="stylesheet" href="../../css/style.css">
-
     <?php include '../../config/session.php'; ?>
 </head>
 

@@ -48,21 +48,18 @@
                                 <li class="checked">
                                     <form action="" method="POST">
                                         <i class="fa fa-check-square-o"></i>
-                                        <div>taskname:<?php echo $task['taskname'] ?></div>
-                                        <div>tasklistname:<?php echo $task['tasklistname'] ?></div>
+                                        <span>name:<?php echo $task['name'] ?></span>
                                         <div class="info">
                                             <div>description: <?php echo $task['description'] ?></div>
                                             <div>status: <?php echo $task['status'] ?></div>
+                                            <div>user: <?php echo $task['userid'] ?></div>
                                         </div>
                                     </form>
                                 </li>
                             </ul>
                         </div>
                     <?php endforeach; ?>
-                <?php else: ?>
-                    Geen taken. Voeg een taak toe
                 <?php endif; ?>
-                <?php var_dump($tasks)?>
             </div>
         </div>
     </div>
