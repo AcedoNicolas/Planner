@@ -1,21 +1,30 @@
 $(".taskListElement").on('click', function () {
-    var taskListId = $(this).data('value');
+    let taskListId = $(this).data('value');
+    getClickedTasks(taskListId);
+});
 
+function getClickedTasks(taskListId) {
     $.ajax({
         type: 'GET',
-        url: 'updateTasks.php',
+        url: 'get-selected-tasks.php',
         data: {taskListId: taskListId},
         success: function (response) {
-            for (var item in response) {
-                $('.tasks').append(
-                    "<li>\n" +
-                    "<form method=\"POST\">\n" +
-                    "    <i class=\"fa fa-check-square-o\"></i>\n" +
-                    "<div>" + item.name + "</div>\n" +
-                    "</form>\n" +
-                    "</li>"
-                )
+            let returnedTasks = response;
+            let taskListBody = '';
+            console.log(response);
+            if (response.length) {
+                returnedTasks.forEach(function (task) {
+                    taskListBody +=
+                     "<li>\n" +
+                     "<form method=\"POST\">\n" +
+                     "<div>"+ task.name +"</div>\n" +
+                     "<input type=\"hidden\"  name=\"deleteTask\" value='"+ task.id +"'>\n" +
+                     "<input type=\"submit\" value=\"verwijder\"/>\n" +
+                     "</form>\n" +
+                     "</li>"
+                });
             }
+            $('.tasks').html(taskListBody);
         }
     })
-});
+}

@@ -43,7 +43,12 @@
             <div class="content">
                 <h2>Tasklist</h2>
                 <ul>
-                    <li><a href="#" class="taskListElement is-active" data-value="0">alle taken</a></li>
+                    <li>
+                        <form method="POST">
+                            <a href="#" class="taskListElement" data-value="0">alle taken</a>
+                        </form>
+                    </li>
+
                     <?php if ($tasksList) : ?>
                         <?php foreach ($tasksList as $taskList): ?>
                             <li>
@@ -66,7 +71,15 @@
                 <h2>Tasks</h2>
                 <?php if ($tasks) : ?>
                     <ul class="tasks">
-                        <li></li>
+                        <?php foreach ($tasks as $task): ?>
+                            <li>
+                                <form method="POST">
+                                    <div><?php echo $task['name'] ?></div>
+                                    <input type="hidden"  name="deleteTask" value="<?php echo $task['id'] ?>">
+                                    <input type="submit" value="verwijder"/>
+                                </form>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 <?php else: ?>
                     Geen takenLijsten. Voeg een taakenlijst toe

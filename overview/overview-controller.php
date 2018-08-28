@@ -21,6 +21,7 @@ if (!empty($taskcs)) {
 }
 
 if (isset($_POST['deleteTask'])) {
+    echo 'post done';
     $taskId = $_POST['deleteTask'];
     $sql = "DELETE FROM tasks WHERE id='$taskId'";
 
@@ -29,5 +30,4 @@ if (isset($_POST['deleteTask'])) {
     } else {
         echo "Error deleting record: " . $conn->error;
     }
-
 }
