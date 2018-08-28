@@ -24,11 +24,6 @@
     <input type="text" name="taskdescription"/>
 
     <label for="taskstatus">Taak Beschrijving</label>
-    <select name="taskstatus">
-        <option value="todo">todo</option>
-        <option value="doing">doing</option>
-        <option value="done">done</option>
-    </select>
 
     <label for="tasklist">Voeg toe aan lijt</label>
     <select name="tasklist">

@@ -13,9 +13,8 @@ if (isset($_POST['submit'])) {
     $taskname = $_POST["taskname"];
     $taskdescription = $_POST["taskdescription"];
     $taskuserid = $_POST["taskuserid"];
-    $status = $_POST["taskstatus"];
     $tasklist = $_POST["tasklist"];
-    $addTaskQuery = "INSERT INTO tasks (name, description, userid, status, tasklistid) VALUES ('$taskname','$taskdescription','$taskuserid', '$status', '$tasklist');";
+    $addTaskQuery = "INSERT INTO tasks (name, description, userid, tasklistid) VALUES ('$taskname','$taskdescription','$taskuserid', '$tasklist');";
     $mysqli->query($addTaskQuery);
     header("location: add.php");
 }

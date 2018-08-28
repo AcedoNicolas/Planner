@@ -4,13 +4,16 @@ include '../config/session.php';
 include '../config/database_connection.php';
 
 // https://stackoverflow.com/questions/4064444/returning-json-from-a-php-script
-$var = $_GET['taskListId'];
-if ($var === 0) {
-    $fetch_tasks = $mysqli->query("SELECT * FROM tasks WHERE userid='$user_id'");
+$taskListStatus = $_POST['taskListStatus'];
+$taskId = $_POST['taskId'];
+echo $taskListStatus;
+
+if ($taskListStatus == "todo") {
+    $fetch_tasks = $mysqli->query("UPDATE tasks SET status = 'doing' WHERE id = '$taskId';");
 } else {
-    $fetch_tasks = $mysqli->query("SELECT * FROM tasks WHERE userid='$user_id' AND tasklistid='$var'");
+    $fetch_tasks = $mysqli->query("UPDATE tasks SET status = 'todo' WHERE id = '$taskId';");
 }
 
-$data = mysqli_fetch_all($fetch_tasks, MYSQLI_ASSOC);
-header('Content-Type: application/json'); //JSON object maken om in JS makkelijk te kunnen loopen door data
-echo json_encode($data); //JSON object maken om in JS makkelijk te kunnen loopen door data
+//$data = mysqli_fetch_all($fetch_tasks, MYSQLI_ASSOC);
+//header('Content-Type: application/json'); //JSON object maken om in JS makkelijk te kunnen loopen door data
+//echo json_encode($data); //JSON object maken om in JS makkelijk te kunnen loopen door data
