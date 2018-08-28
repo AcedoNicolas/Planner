@@ -35,6 +35,7 @@ function addComment(taskId, comment) {
 
 function toggleTaskStatus(taskId, taskListStatus, element) {
     if (taskListStatus === "todo") {
+        $(element).data('checked', 'doing').html('doing');
     } else {
         $(element).data('checked', 'todo').html('todo');
     }

@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="517376e6-1689-4dbf-9659-a0bd17c8f3d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/overview/add-comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/get-selected-tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/overview/get-selected-tasks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/overview-controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/overview/overview-controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/overview/overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/overview/overview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/overview/overview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/update-task-status.php" beforeDir="false" afterPath="$PROJECT_DIR$/overview/update-task-status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/overview/upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/add/add-controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/add/add-controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks/add/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/add/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +31,7 @@
           <entry key="css" value="11" />
           <entry key="html" value="1" />
           <entry key="js" value="11" />
-          <entry key="php" value="110" />
+          <entry key="php" value="111" />
           <entry key="png" value="2" />
         </counts>
       </usages-collector>
@@ -50,13 +41,13 @@
           <entry key="HTML" value="1" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="11" />
-          <entry key="PHP" value="110" />
+          <entry key="PHP" value="111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="30" />
-          <entry key="js" value="2244" />
+          <entry key="js" value="2261" />
           <entry key="php" value="6495" />
         </counts>
       </usages-collector>
@@ -64,7 +55,7 @@
         <counts>
           <entry key="CSS" value="31" />
           <entry key="HTML" value="9" />
-          <entry key="JavaScript" value="2234" />
+          <entry key="JavaScript" value="2251" />
           <entry key="PHP" value="6476" />
           <entry key="SQL" value="19" />
         </counts>
@@ -82,10 +73,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database_connection.php">
+        <entry file="file://$PROJECT_DIR$/overview/overview-controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" selection-start-line="8" selection-end-line="17" />
+            <state relative-caret-position="280">
+              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -93,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/overview/overview.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="402">
               <caret line="91" column="34" lean-forward="true" selection-start-line="91" selection-start-column="34" selection-end-line="99" selection-end-column="127" />
             </state>
           </provider>
@@ -161,8 +152,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/overview/overview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+            <state relative-caret-position="162">
+              <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -319,7 +310,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535496596025" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535496863550" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -370,7 +361,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53463000" />
+    <option name="totallyTimeSpent" value="53730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="846" extended-state="6" />
@@ -504,13 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/overview/overview-controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/overview/update-task-status.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -601,17 +585,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/overview/overview-controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/overview/overview.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="402">
           <caret line="91" column="34" lean-forward="true" selection-start-line="91" selection-start-column="34" selection-end-line="99" selection-end-column="127" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/overview/overview.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+        <state relative-caret-position="162">
+          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
         </state>
       </provider>
     </entry>
