@@ -75,7 +75,7 @@
                             <li>
                                 <form method="POST">
                                     <div><?php echo $task['name'] ?></div>
-                                    <div class="taskStatus <?php echo $task['status'] ?>"
+                                    <div class="taskStatus"
                                          data-checked="<?php echo $task['status'] ?>"
                                          name="taskStatus"
                                          data-id="<?php echo $task['id'] ?>">
@@ -84,7 +84,7 @@
                                     <input type="hidden" name="deleteTask" value="<?php echo $task['id'] ?>">
                                     <input type="submit" value="verwijder"/>
                                 </form>
-                            </li
+                            </li>
                         <?php endforeach; ?>
                     </ul>
                 <?php else: ?>
