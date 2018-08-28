@@ -3,15 +3,31 @@
 include '../config/session.php';
 include '../config/database_connection.php';
 
-$fetch_tasks = $mysqli->query(
-            "SELECT t.name taskname, t.id, t.status, t.description, tl.name tasklistname, u.first_name
-            FROM tasks t
-            JOIN users u ON t.userid = '$user_id'
-            JOIN tasklist tl ON t.tasklistid = tl.id");
-$tasks = mysqli_fetch_all ($fetch_tasks, MYSQLI_ASSOC);
+$tasklistIsEmpty = true;
+$tasksIsEmpty = true;
+
+$fetch_tasksList = $mysqli->query("SELECT * FROM tasklist");
+$tasksList = mysqli_fetch_all($fetch_tasksList, MYSQLI_ASSOC);
+
+$fetch_alltasks = $mysqli->query("SELECT * FROM tasks WHERE userid='$user_id'");
+$tasks = mysqli_fetch_all($fetch_alltasks, MYSQLI_ASSOC);
 
 
-if ($fetch_tasks->num_rows > 0) {
-    echo $fetch_tasks->num_rows;
-//    https://stackoverflow.com/questions/11264395/get-all-mysql-selected-rows-into-an-array
+if (!empty($tasksList)) {
+    $tasklistIsEmpty = false;
+}
+if (!empty($taskcs)) {
+    $tasksIsEmpty = false;
+}
+
+if (isset($_POST['deleteTask'])) {
+    $taskId = $_POST['deleteTask'];
+    $sql = "DELETE FROM tasks WHERE id='$taskId'";
+
+    if ($mysqli->query($sql) === TRUE) {
+        echo "task deleted successfully";
+    } else {
+        echo "Error deleting record: " . $conn->error;
+    }
+
 }

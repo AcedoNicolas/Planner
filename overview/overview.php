@@ -41,33 +41,41 @@
                 </div>
             </div>
             <div class="content">
-                <?php if (!empty($tasks)) : ?>
-                    <?php foreach ($tasks as $task): ?>
-                        <div class="list">
-                            <ul>
-                                <li class="checked">
-                                    <form action="" method="POST">
-                                        <i class="fa fa-check-square-o"></i>
-                                        <div>taskname:<?php echo $task['taskname'] ?></div>
-                                        <div>tasklistname:<?php echo $task['tasklistname'] ?></div>
-                                        <div class="info">
-                                            <div>description: <?php echo $task['description'] ?></div>
-                                            <div>status: <?php echo $task['status'] ?></div>
-                                        </div>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
-                    <?php endforeach; ?>
+                <h2>Tasklist</h2>
+                <ul>
+                    <li><a href="#" class="taskListElement is-active" data-value="0">alle taken</a></li>
+                    <?php if ($tasksList) : ?>
+                        <?php foreach ($tasksList as $taskList): ?>
+                            <li>
+                                <form method="POST">
+                                    <i class="fa fa-check-square-o"></i>
+                                    <div>
+                                        <a href="#" class="taskListElement" data-value="<?php echo $taskList['id'] ?>">
+                                            <?php echo $taskList['name'] ?>
+                                        </a>
+                                    </div>
+                                </form>
+                            </li>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        Geen takenLijsten. Voeg een taakenlijst toe
+                    <?php endif; ?>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>Tasks</h2>
+                <?php if ($tasks) : ?>
+                    <ul class="tasks">
+                        <li></li>
+                    </ul>
                 <?php else: ?>
-                    Geen taken. Voeg een taak toe
+                    Geen takenLijsten. Voeg een taakenlijst toe
                 <?php endif; ?>
-                <?php var_dump($tasks)?>
             </div>
         </div>
     </div>
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="../js/index.js"></script>
+<script src="overview.js"></script>
 </body>
 </html>
