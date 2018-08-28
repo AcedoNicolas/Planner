@@ -10,10 +10,10 @@ if (!empty($tasksList)){
 }
 
 if (isset($_POST['submit'])) {
-    $taskname = $_POST["taskname"];
-    $taskdescription = $_POST["taskdescription"];
-    $taskuserid = $_POST["taskuserid"];
-    $tasklist = $_POST["tasklist"];
+    $taskname = htmlspecialchars($_POST["taskname"]);
+    $taskdescription = htmlspecialchars($_POST["taskdescription"]);
+    $taskuserid = htmlspecialchars($_POST["taskuserid"]);
+    $tasklist = htmlspecialchars($_POST["tasklist"]);
     $addTaskQuery = "INSERT INTO tasks (name, description, userid, tasklistid) VALUES ('$taskname','$taskdescription','$taskuserid', '$tasklist');";
     $mysqli->query($addTaskQuery);
     header("location: add.php");

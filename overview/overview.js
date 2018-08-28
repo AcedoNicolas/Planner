@@ -3,7 +3,6 @@ $(document).ready(function () {
         let taskListId = $(this).data('value');
         getClickedTasks(taskListId);
     });
-
 });
 
 $(document).on("click", ".taskStatus", function () {
@@ -14,9 +13,28 @@ $(document).on("click", ".taskStatus", function () {
     toggleTaskStatus(taskId, taskListStatus, this);
 });
 
+$(document).on("click", ".addCommentBtn", function () {
+    let comment = $('.commentField').val();
+    let taskId = $(this).data('taskid');
+    addComment(taskId, comment);
+});
+
+function addComment(taskId, comment) {
+    $.ajax({
+        type: 'POST',
+        url: 'add-comment.php',
+        data: {
+            taskId: taskId,
+            comment: comment,
+        }, success: function () {
+            $('.comments').append('<div>' + comment + '</div>');
+            $('.commentField').val('');
+        }
+    });
+}
+
 function toggleTaskStatus(taskId, taskListStatus, element) {
     if (taskListStatus === "todo") {
-        $(element).data('checked', 'doing').html('doing');
     } else {
         $(element).data('checked', 'todo').html('todo');
     }
@@ -52,6 +70,10 @@ function getClickedTasks(taskListId) {
                                 </div>
                                 <input type="hidden" name="deleteTask" value="<?php echo $task['id'] ?>">
                                 <input type="submit" value="verwijder"/>
+                                 <div class="comments">
+                                 </div>
+                                 <textarea class="commentField" name="comment" cols="30" rows="10"></textarea>
+                                 <div class="addCommentBtn" data-taskid="<?php echo $task['id'] ?>">voeg comments toe </div>
                             </form>
                          </li>`
 

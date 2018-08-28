@@ -13,7 +13,7 @@
 </body>
 </html>
 <?PHP
-  if(!empty($_FILES['uploaded_file']))
+  if(!empty(htmlspecialchars($_FILES['uploaded_file'])))
   {
     $path = "uploads/";
     $path = $path . basename( $_FILES['uploaded_file']['name']);

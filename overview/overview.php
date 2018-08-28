@@ -74,6 +74,7 @@
                         <?php foreach ($tasks as $task): ?>
                             <li>
                                 <form method="POST">
+                                    <input type="hidden" name="taskid" value="<?php echo $task['id'] ?>">
                                     <div><?php echo $task['name'] ?></div>
                                     <div class="taskStatus"
                                          data-checked="<?php echo $task['status'] ?>"
@@ -81,8 +82,22 @@
                                          data-id="<?php echo $task['id'] ?>">
                                         <?php echo $task['status'] ?>
                                     </div>
-                                    <input type="hidden" name="deleteTask" value="<?php echo $task['id'] ?>">
-                                    <input type="submit" value="verwijder"/>
+                                    <input type="submit" name="deleteTaskBtn" value="verwijder"/>
+
+                                    <h3>Comments</h3>
+                                    <?php
+                                    $getTaskComments = $mysqli->query("SELECT * FROM comments WHERE taskid='" . $task['id'] . "'");
+                                    $comments = mysqli_fetch_all($getTaskComments, MYSQLI_ASSOC);
+                                    ?>
+                                    <div class="comments">
+                                        <?php foreach ($comments as $comment): ?>
+                                            <div><i><?php echo $comment['created_date'] ?></i></div>
+                                            <div><?php echo $comment['comment'] ?></div>
+                                        <?php endforeach; ?>
+                                    </div>
+
+                                    <textarea class="commentField" name="comment" cols="30" rows="10"></textarea>
+                                    <div class="addCommentBtn" data-taskid="<?php echo $task['id'] ?>">voeg comments toe </div>
                                 </form>
                             </li>
                         <?php endforeach; ?>

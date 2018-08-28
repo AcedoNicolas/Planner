@@ -4,7 +4,7 @@ include '../config/session.php';
 include '../config/database_connection.php';
 
 // https://stackoverflow.com/questions/4064444/returning-json-from-a-php-script
-$var = $_GET['taskListId'];
+$var = htmlspecialchars($_GET['taskListId']);
 if ($var === 0) {
     $fetch_tasks = $mysqli->query("SELECT * FROM tasks WHERE userid='$user_id'");
 } else {
